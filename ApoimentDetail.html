@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoiment Detaile</title>
+</head>
+<h1>Apoiment Detailes</h1>
+<body>
+    <form onsubmit="saveToLocalStorege(event)">
+        <label>Name</label><br>
+        <input type="text" name ="username" required/><br>
+        <label>Email Id</label><br>
+        <input type="email" name="email Id" required/><br>
+        <label>Phonenumber</label><br>
+        <input type="tel" name="Phonenumber"><br>
+        <button>submit</button><br>
+    
+    </form>
+    <script>
+    function saveToLocalStorege(event){
+        event.prevenDefault();
+        const name = event.target.username.value;
+        const email = event.target.email.value;
+        const Phonenumber = event.target.Phonenumber.value
+        localStorage.setItem('name',name);
+        localStorage.setItem('email', email);
+        localStorage.setItem('phonenumber', Phonenumber);
+        localStorage.setItem('userDetaile',js.String)
+        const obj = {
+            name,
+            email,
+            Phonenumber
+        }
+    }
+    </script>
+    
+</body>
+</html>
